@@ -62,4 +62,3 @@ Welcome to **Mx Studio** ("Create Beyond Limits."). This document governs AI-ass
 - **Git Hygiene**:
   - Never commit credentials or `.env.local`.
   - Maintain clean, descriptive commit messages following Conventional Commits.
-

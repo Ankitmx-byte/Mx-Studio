@@ -10,14 +10,15 @@ export const metadata: Metadata = {
     template: "%s | Mx Studio",
   },
   description:
-    "Premium AI-powered creative workspace for video, photo, audio, and ad production.",
+    "Your Entire Creative Workflow, Powered by AI. Premium creative workspace for video editing, photo enhancement, audio production, and ad generation.",
   keywords: [
     "AI Video Studio",
-    "Video Editor",
+    "Professional Video Editor",
     "AI Photo Studio",
     "AI Ad Studio",
     "Audio Studio",
     "Creative Workspace",
+    "Mx Studio",
   ],
 };
 
@@ -34,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body className="min-h-screen bg-[#090812] text-white antialiased">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <body className="min-h-screen bg-[#090812] font-sans text-white antialiased selection:bg-[#F13DBB]/30 selection:text-white">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

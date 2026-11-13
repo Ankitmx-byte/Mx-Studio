@@ -12,4 +12,3 @@ export function initGSAP() {
 }
 
 export { gsap, ScrollTrigger };
-

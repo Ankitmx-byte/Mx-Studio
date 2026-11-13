@@ -92,4 +92,3 @@ Comprehensive architectural blueprints and developer documentation are located i
 ## 📄 License
 
 Proprietary © Mx Studio. All rights reserved.
-
