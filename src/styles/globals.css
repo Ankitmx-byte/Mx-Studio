@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Mx Studio Dark Creative Workspace Tokens (Default) */
+    --background: 247 38% 5%; /* #090812 */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+
+    --card: 237 30% 13%; /* #17182B Elevated Surface */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 237 30% 13%; /* #17182B Elevated Surface */
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 318 86% 59%; /* #F13DBB Primary Pink */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 235 38% 11%; /* #111326 Secondary Surface */
+    --secondary-foreground: 240 11% 69%; /* #A5A5B8 */
+
+    --muted: 235 38% 11%; /* #111326 */
+    --muted-foreground: 240 11% 69%; /* #A5A5B8 Secondary Text */
+
+    --accent: 258 90% 66%; /* #8B5CF6 Purple */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 237 30% 18%; /* Subtle surface border */
+    --input: 237 30% 18%;
+    --ring: 219 100% 61%; /* #367BFF Electric Blue */
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 247 38% 5%; /* #090812 */
+    --foreground: 0 0% 100%;
+
+    --card: 237 30% 13%; /* #17182B */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 237 30% 13%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 318 86% 59%; /* #F13DBB */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 235 38% 11%; /* #111326 */
+    --secondary-foreground: 240 11% 69%;
+
+    --muted: 235 38% 11%;
+    --muted-foreground: 240 11% 69%;
+
+    --accent: 258 90% 66%; /* #8B5CF6 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 237 30% 18%;
+    --input: 237 30% 18%;
+    --ring: 219 100% 61%; /* #367BFF */
+    --sidebar-background: 235 38% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 318 86% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 237 30% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 237 30% 18%;
+    --sidebar-ring: 219 100% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-[#F13DBB]/30 selection:text-white;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Scrollbars for High-Density Creative Editors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090812;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2038;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3254;
+}
+
+/* Glassmorphism Utility Classes */
+.glass-panel {
+  background: rgba(17, 19, 38, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(23, 24, 43, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-dropdown {
+  background: rgba(23, 24, 43, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+/* Gradient Borders */
+.gradient-border-pink-blue {
+  position: relative;
+  background-clip: padding-box;
+}
+
+.gradient-border-pink-blue::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(241, 61, 187, 0.4),
+    rgba(54, 123, 255, 0.4)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
